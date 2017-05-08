@@ -1,8 +1,7 @@
 # Prepack ашигласан жишээ
 
 URL
-
-- https://ics-ikeda.github.io/test-prepack-particle/www/
+- https://anargts09.github.io/test-prepack/www
 
 
 Facebook Prepack дэлгэрэнгүй
