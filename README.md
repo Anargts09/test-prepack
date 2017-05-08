@@ -8,7 +8,7 @@ Facebook Prepack дэлгэрэнгүй
 
 - [Prepack](https://prepack.io/)
 
-Shareladge.mn нийтлэл
+Shareledge.mn нийтлэл
 
-- []()
+- [Shareledge.mn](https://shareledge.com/posts/js-iyg-urdchilan-compile-hiyde)
 
