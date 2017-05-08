@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<canvas id="world" width="465" height="465"></canvas>
+<script src="particle.js"></script>
+<script>
+  (function () {
+    'use strict';
+    
+    var canvas = document.querySelector('#world');
+    var ctx = canvas.getContext('2d');
+    var mouseX = 0;
+    var mouseY = 0;
+
+    var world = new World();
+    world.init();
+
+    canvas.addEventListener('mousemove', function (e) {
+      var rect = e.target.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
+
+
+    enterFrameHandler();
+    function enterFrameHandler() {
+      requestAnimationFrame(enterFrameHandler);
+
+      ctx.fillStyle = 'rgb(0, 0, 0)';
+      ctx.fillRect(0, 0, 465, 465);
+
+      ctx.fillStyle = 'rgb(255, 255, 255)';
+
+      var particleList = world.update(mouseX, mouseY);
+
+      particleList.map(function (n) {
+        ctx.fillRect(n.x, n.y, 1, 1);
+      });
+    }
+  })();
+
+</script>
+</body>
+</html>
